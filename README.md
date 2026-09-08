@@ -43,13 +43,44 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+module fa1_df(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+
+module fa1_df(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
+
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
 
 **RTL Schematic**
 
 **Output Timing Waveform**
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4f73a144-a966-4cc7-ae25-121eec3157ad" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ee5e62e0-f14d-4924-bf70-1ba78b4b5587" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bba78e9e-82b5-418b-9ad9-bbafa98a923d" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fde6ec9f-6de7-47b0-af5b-0b231ccbfd8e" />
+
 
 **Result:**
 
